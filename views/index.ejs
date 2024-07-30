@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+    <style>
+        .delivery {
+            display: none;
+        }
+    </style>
+    <script>
+        function showDelivery() {
+            document.getElementById('delivery').style.display = 'block';
+            document.getElementById('showAnswerButton').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="/get_twopart_joke">
+            <input type="submit" value="Get a Two-Part Joke">
+        </form>
+        
+        <form method="post" action="/get_single_joke">
+            <input type="submit" value="Get a Single Joke">
+        </form>
+
+        <% if (locals.twopartJoke) { %>
+            <h2>Setup: <%= twopartJoke %></h2>
+            <button id="showAnswerButton" onclick="showDelivery()">Show Answer</button>
+            <h2 id="delivery" class="delivery">Delivery: <%= delivery %></h2>
+        <% } else if (locals.singleJoke) { %>
+            <h2>Joke: <%= singleJoke %></h2>
+        <% } else { %>
+            <h1>Please choose a joke type...</h1>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  } */
+
+body {
+    min-height: 100vh;
+    background: #46558b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* padding-top: 2rem; */
+    padding-bottom: 2rem;
+    /* box-sizing: border-box; */
+    border: 0.25rem, solid, white;
+}
+
+form {
+    padding-bottom: 0.5rem;
+}
+
+.container {
+    border: 0.15rem, solid, white;
+    padding: 1rem;
+    width: 40rem;
+
+}
