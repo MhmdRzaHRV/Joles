@@ -42,15 +42,6 @@ app.post("/get_single_joke", async(req, res) => {
     }
 })
 
-// app.post("/get_joke_delivery", async(req, res) => {
-//     try{
-//         const result = await axios.get(API_URL);
-//         res.render("index.ejs", {delivery: JSON.stringify(result.data.delivery)});
-//     }catch(error){
-//         res.render("index.ejs", {delivery: JSON.stringify(error.response.data)});
-//     }
-// })
-
 //define listener
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
